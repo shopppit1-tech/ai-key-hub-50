@@ -1,6 +1,10 @@
 <!doctype html>
 <html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#101226"><title>AI Key Hub — 50 Direktori API AI</title>
+<meta name="theme-color" content="#101226"><meta name="description" content="Direktori 50 layanan dan platform AI dengan halaman developer/API.">
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="icon" type="image/png" sizes="192x192" href="./icons/icon-192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="./icons/icon-180.png">
+<meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="mobile-web-app-capable" content="yes"><title>AI Key Hub — 50 Direktori API AI</title>
 <style>
 :root{color-scheme:dark;--bg:#0b1020;--panel:#151c31;--line:#283451;--muted:#aab5ce;--text:#f5f7ff;--accent:#9b8cff;--green:#5ee0ae}
 *{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 20% 0%,#25204b 0,transparent 42%),var(--bg);color:var(--text);font:15px/1.55 system-ui,-apple-system,Segoe UI,sans-serif}
@@ -16,10 +20,11 @@ h1{font-size:clamp(30px,6vw,48px);line-height:1.1;margin:8px 0}.grad{background:
 .note{font-size:13px;color:#c0c9dc;flex:1}.links{display:flex;gap:8px;margin-top:15px}.links a{font-size:13px;text-decoration:none;padding:8px 10px;border-radius:9px;background:#6d5bd0;color:white}.links a.secondary{background:#242e48;color:#dce4fa}
 footer{color:var(--muted);font-size:12px;padding:30px 0 42px}.warning{border:1px solid #66522c;background:#2a2419;color:#ffe0a6;border-radius:14px;padding:13px 15px;margin:16px 0}.empty{text-align:center;color:var(--muted);padding:35px;display:none}
 @media(max-width:620px){.controls{grid-template-columns:1fr}.grid{grid-template-columns:1fr}.card{min-height:190px}}
+.install-btn{display:block;margin:16px auto 0;padding:10px 16px;border:1px solid #8276e8;border-radius:12px;background:#6d5bd0;color:#fff;font:inherit;font-weight:650;cursor:pointer}.install-btn:hover{background:#7a69dc}.install-btn:focus-visible{outline:3px solid #65e4c2;outline-offset:3px}.install-btn[hidden]{display:none}
 </style></head><body>
 <header><div class="wrap"><span class="pill">DIREKTORI PENGEMBANG • UPDATE 5 NOVEMBER 2026</span>
 <h1><span class="grad">AI KEY HUB</span></h1><p class="sub">50 layanan dan platform AI dengan halaman developer/API. Cari layanan, cek status akses gratis, lalu buka halaman resmi untuk membuat akun dan API key.</p>
-<div class="stats"><div class="stat"><b>50</b> layanan</div><div class="stat"><b>8+</b> kategori</div><div class="stat"><b>Tanpa duplikat</b></div></div></div></header>
+<div class="stats"><div class="stat"><b>50</b> layanan</div><div class="stat"><b>8+</b> kategori</div><div class="stat"><b>Tanpa duplikat</b></div></div><button id="installPwaBtn" class="install-btn" type="button">Instal AI Key Hub</button></div></header>
 <main class="wrap">
 <div class="warning"><b>Penting:</b> Tidak semua 50 layanan menyediakan API gratis permanen. Label membedakan free tier, kuota/model gratis, kredit percobaan, promo, dan layanan berbayar/trial. Status serta kuota dapat berubah; cek halaman harga resmi sebelum dipakai. Chat/web gratis tidak otomatis berarti API gratis.</div>
 <div class="controls"><input id="q" placeholder="Cari nama layanan, kategori, atau fitur…"><select id="status"><option value="">Semua status</option><option>Free tier</option><option>Free allowance</option><option>Model gratis terbatas</option><option>Free quota/model tertentu</option><option>Trial gratis terbatas</option><option>Kredit percobaan</option><option>Gratis self-hosted</option></select></div>
@@ -34,4 +39,40 @@ function tagClass(s){return /free tier|free allowance|gratis self-hosted|model g
 function categoryMatches(item,c){if(!c)return true;let t=(item.category+' '+item.name).toLowerCase();if(c==='LLM')return /llm|teks|chat|model|embedding|inference/.test(t);if(c==='Gambar')return /gambar|image|vision|ocr|flux/.test(t);if(c==='Video')return /video/.test(t);if(c==='Audio')return /audio|speech|voice|suara|music|musik|text-to-speech/.test(t);if(c==='Coding')return /coding|code|developer/.test(t);if(c==='Local')return /ollama|self-hosted|local/.test(t);return true}
 function render(){let q=$('q').value.toLowerCase(),s=$('status').value;let found=items.filter(x=>(!q||(x.name+' '+x.category+' '+x.status+' '+x.note).toLowerCase().includes(q))&&(!s||x.status===s)&&categoryMatches(x,cat));$('grid').innerHTML=found.map((x,i)=>`<article class="card"><div class="top"><h3>${x.name}</h3><span class="status ${tagClass(x.status)}">${x.status}</span></div><div class="category">${x.category}</div><div class="note">${x.note}</div><div class="links"><a href="${x.signup}" target="_blank" rel="noopener noreferrer">Buka situs / daftar ↗</a><a class="secondary" href="${x.pricing}" target="_blank" rel="noopener noreferrer">Harga & docs</a></div></article>`).join('');$('count').textContent=`Menampilkan ${found.length} dari ${items.length} layanan`;$('empty').style.display=found.length?'none':'block'}
 $('q').addEventListener('input',render);$('status').addEventListener('change',render);document.querySelectorAll('#filters button').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('#filters button').forEach(x=>x.classList.remove('active'));b.classList.add('active');cat=b.dataset.cat;render()}));render();
-</script></body></html>
+</script><script>
+(() => {
+  const installButton = document.getElementById("installPwaBtn");
+  let installPrompt = null;
+  const isStandalone = window.matchMedia("(display-mode: standalone)").matches || window.navigator.standalone === true;
+  if (isStandalone) installButton.hidden = true;
+
+  window.addEventListener("beforeinstallprompt", (event) => {
+    event.preventDefault();
+    installPrompt = event;
+  });
+
+  installButton.addEventListener("click", async () => {
+    if (installPrompt) {
+      await installPrompt.prompt();
+      await installPrompt.userChoice;
+      installPrompt = null;
+      return;
+    }
+    const isIos = /iphone|ipad|ipod/i.test(navigator.userAgent) && !isStandalone;
+    alert(isIos
+      ? "Untuk memasang: buka menu Bagikan di Safari, lalu pilih Tambahkan ke Layar Utama."
+      : "Untuk memasang: buka menu browser, lalu pilih Instal aplikasi atau Tambahkan ke layar utama.");
+  });
+
+  window.addEventListener("appinstalled", () => { installButton.hidden = true; });
+
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => {
+      navigator.serviceWorker.register("./service-worker.js", { scope: "./" }).catch((error) => {
+        console.error("PWA service worker registration failed:", error);
+      });
+    });
+  }
+})();
+</script>
+</body></html>
