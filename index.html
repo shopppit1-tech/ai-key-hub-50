@@ -1,10 +1,24 @@
 <!doctype html>
 <html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#101226"><meta name="description" content="Direktori 50 layanan dan platform AI dengan halaman developer/API.">
+<meta name="theme-color" content="#101226">
+<meta name="description" content="Temukan 50 layanan API AI untuk teks, gambar, audio, video, dan coding. Bandingkan free tier, kuota, trial, harga, serta tautan resmi developer.">
+<link rel="canonical" href="https://apigratis.my.id/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="AI Key Hub">
+<meta property="og:title" content="50 API AI: Free Tier, Trial &amp; Harga | AI Key Hub">
+<meta property="og:description" content="Temukan 50 layanan API AI untuk teks, gambar, audio, video, dan coding. Bandingkan free tier, kuota, trial, harga, serta tautan resmi developer.">
+<meta property="og:url" content="https://apigratis.my.id/">
+<meta property="og:image" content="https://apigratis.my.id/icons/icon-512.png">
+<meta property="og:image:alt" content="Ikon AI Key Hub">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="50 API AI: Free Tier, Trial &amp; Harga | AI Key Hub">
+<meta name="twitter:description" content="Temukan 50 layanan API AI untuk teks, gambar, audio, video, dan coding. Bandingkan free tier, kuota, trial, harga, serta tautan resmi developer.">
+<meta name="twitter:image" content="https://apigratis.my.id/icons/icon-512.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"AI Key Hub","alternateName":"AI Key Hub 50","url":"https://apigratis.my.id/"}</script>
 <link rel="manifest" href="./manifest.webmanifest">
 <link rel="icon" type="image/png" sizes="192x192" href="./icons/icon-192.png">
 <link rel="apple-touch-icon" sizes="180x180" href="./icons/icon-180.png">
-<meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="mobile-web-app-capable" content="yes"><title>AI Key Hub — 50 Direktori API AI</title>
+<meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="mobile-web-app-capable" content="yes"><title>50 API AI: Free Tier, Trial &amp; Harga | AI Key Hub</title>
 <style>
 :root{color-scheme:dark;--bg:#0b1020;--panel:#151c31;--line:#283451;--muted:#aab5ce;--text:#f5f7ff;--accent:#9b8cff;--green:#5ee0ae}
 *{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 20% 0%,#25204b 0,transparent 42%),var(--bg);color:var(--text);font:15px/1.55 system-ui,-apple-system,Segoe UI,sans-serif}
@@ -21,24 +35,359 @@ h1{font-size:clamp(30px,6vw,48px);line-height:1.1;margin:8px 0}.grad{background:
 footer{color:var(--muted);font-size:12px;padding:30px 0 42px}.warning{border:1px solid #66522c;background:#2a2419;color:#ffe0a6;border-radius:14px;padding:13px 15px;margin:16px 0}.empty{text-align:center;color:var(--muted);padding:35px;display:none}
 @media(max-width:620px){.controls{grid-template-columns:1fr}.grid{grid-template-columns:1fr}.card{min-height:190px}}
 .install-btn{display:block;margin:16px auto 0;padding:10px 16px;border:1px solid #8276e8;border-radius:12px;background:#6d5bd0;color:#fff;font:inherit;font-weight:650;cursor:pointer}.install-btn:hover{background:#7a69dc}.install-btn:focus-visible{outline:3px solid #65e4c2;outline-offset:3px}.install-btn[hidden]{display:none}
-</style></head><body>
+.card[hidden]{display:none!important}</style></head><body>
 <header><div class="wrap"><span class="pill">DIREKTORI PENGEMBANG • UPDATE 5 NOVEMBER 2026</span>
 <h1><span class="grad">AI KEY HUB</span></h1><p class="sub">50 layanan dan platform AI dengan halaman developer/API. Cari layanan, cek status akses gratis, lalu buka halaman resmi untuk membuat akun dan API key.</p>
 <div class="stats"><div class="stat"><b>50</b> layanan</div><div class="stat"><b>8+</b> kategori</div></div><button id="installPwaBtn" class="install-btn" type="button">Instal AI Key Hub</button></div></header>
 <main class="wrap">
 <div class="warning"><b>Penting:</b> Tidak semua 50 layanan menyediakan API gratis permanen. Label membedakan free tier, kuota/model gratis, kredit percobaan, promo, dan layanan berbayar/trial. Status serta kuota dapat berubah; cek halaman harga resmi sebelum dipakai. Chat/web gratis tidak otomatis berarti API gratis.</div>
-<div class="controls"><input id="q" placeholder="Cari nama layanan, kategori, atau fitur…"><select id="status"><option value="">Semua status</option><option>Free tier</option><option>Free allowance</option><option>Model gratis terbatas</option><option>Free quota/model tertentu</option><option>Trial gratis terbatas</option><option>Kredit percobaan</option><option>Gratis self-hosted</option></select></div>
+<div class="controls"><input id="q" type="search" placeholder="Cari nama layanan, kategori, atau fitur…" aria-label="Cari layanan, kategori, atau fitur API AI" autocomplete="off"><select id="status" aria-label="Filter status akses atau harga"><option value="">Semua status</option><option>Free tier</option><option>Free allowance</option><option>Model gratis terbatas</option><option>Free quota/model tertentu</option><option>Trial gratis terbatas</option><option>Kredit percobaan</option><option>Gratis self-hosted</option></select></div>
 <div class="filters" id="filters"><button class="active" data-cat="">Semua</button><button data-cat="LLM">LLM / Chat</button><button data-cat="Gambar">Gambar</button><button data-cat="Video">Video</button><button data-cat="Audio">Audio / Suara</button><button data-cat="Coding">Coding</button><button data-cat="Local">Self-hosted</button></div>
-<p id="count" style="color:var(--muted);font-size:13px"></p><section class="grid" id="grid"></section><div class="empty" id="empty">Tidak ada hasil yang cocok.</div>
+<p id="count" aria-live="polite" style="color:var(--muted);font-size:13px"></p><h2 id="directory-heading">Direktori 50 layanan API AI</h2>
+<p class="directory-intro">Bandingkan layanan untuk teks, gambar, video, audio, coding, dan model yang dapat dijalankan sendiri. Status free tier, kuota, trial, serta harga bisa berubah; periksa halaman resmi setiap penyedia sebelum membuat API key.</p>
+<section class="grid" id="grid" aria-labelledby="directory-heading">
+<article class="card" data-name="Google AI Studio / Gemini" data-category="Teks, gambar, audio, video" data-status="Free tier" data-search="google ai studio / gemini teks, gambar, audio, video free tier kuota gratis untuk model tertentu; batas per project dan model.">
+  <div class="top"><h3>Google AI Studio / Gemini</h3><span class="status free">Free tier</span></div>
+  <div class="category">Teks, gambar, audio, video</div>
+  <div class="note">Kuota gratis untuk model tertentu; batas per project dan model.</div>
+  <div class="links"><a href="https://aistudio.google.com/apikey" target="_blank" rel="noopener noreferrer" aria-label="Buka situs resmi atau daftar di Google AI Studio / Gemini">Buka situs / daftar ↗</a><a class="secondary" href="https://ai.google.dev/gemini-api/docs/pricing" target="_blank" rel="noopener noreferrer" aria-label="Lihat harga dan dokumentasi Google AI Studio / Gemini">Harga & docs</a></div>
+</article>
+<article class="card" data-name="GroqCloud" data-category="LLM teks, audio" data-status="Free tier" data-search="groqcloud llm teks, audio free tier free plan dengan rate limit per model.">
+  <div class="top"><h3>GroqCloud</h3><span class="status free">Free tier</span></div>
+  <div class="category">LLM teks, audio</div>
+  <div class="note">Free plan dengan rate limit per model.</div>
+  <div class="links"><a href="https://console.groq.com/keys" target="_blank" rel="noopener noreferrer" aria-label="Buka situs resmi atau daftar di GroqCloud">Buka situs / daftar ↗</a><a class="secondary" href="https://console.groq.com/docs/rate-limits" target="_blank" rel="noopener noreferrer" aria-label="Lihat harga dan dokumentasi GroqCloud">Harga & docs</a></div>
+</article>
+<article class="card" data-name="OpenRouter" data-category="Multi-model: teks, gambar, audio" data-status="Model gratis terbatas" data-search="openrouter multi-model: teks, gambar, audio model gratis terbatas pilih model bertanda :free; ada batas permintaan.">
+  <div class="top"><h3>OpenRouter</h3><span class="status free">Model gratis terbatas</span></div>
+  <div class="category">Multi-model: teks, gambar, audio</div>
+  <div class="note">Pilih model bertanda :free; ada batas permintaan.</div>
+  <div class="links"><a href="https://openrouter.ai/keys" target="_blank" rel="noopener noreferrer" aria-label="Buka situs resmi atau daftar di OpenRouter">Buka situs / daftar ↗</a><a class="secondary" href="https://openrouter.ai/models?max_price=0" target="_blank" rel="noopener noreferrer" aria-label="Lihat harga dan dokumentasi OpenRouter">Harga & docs</a></div>
+</article>
+<article class="card" data-name="Mistral AI" data-category="LLM teks, embedding, OCR" data-status="Free tier / trial" data-search="mistral ai llm teks, embedding, ocr free tier / trial free experiment plan untuk prototipe; batas berlaku.">
+  <div class="top"><h3>Mistral AI</h3><span class="status free">Free tier / trial</span></div>
+  <div class="category">LLM teks, embedding, OCR</div>
+  <div class="note">Free Experiment plan untuk prototipe; batas berlaku.</div>
+  <div class="links"><a href="https://console.mistral.ai/api-keys/" target="_blank" rel="noopener noreferrer" aria-label="Buka situs resmi atau daftar di Mistral AI">Buka situs / daftar ↗</a><a class="secondary" href="https://docs.mistral.ai/deployment/ai-studio/tier/" target="_blank" rel="noopener noreferrer" aria-label="Lihat harga dan dokumentasi Mistral AI">Harga & docs</a></div>
+</article>
+<article class="card" data-name="Cohere" data-category="Chat, rerank, embedding" data-status="Trial gratis terbatas" data-search="cohere chat, rerank, embedding trial gratis terbatas trial key dengan batas penggunaan.">
+  <div class="top"><h3>Cohere</h3><span class="status trial">Trial gratis terbatas</span></div>
+  <div class="category">Chat, rerank, embedding</div>
+  <div class="note">Trial key dengan batas penggunaan.</div>
+  <div class="links"><a href="https://dashboard.cohere.com/api-keys" target="_blank" rel="noopener noreferrer" aria-label="Buka situs resmi atau daftar di Cohere">Buka situs / daftar ↗</a><a class="secondary" href="https://cohere.com/pricing" target="_blank" rel="noopener noreferrer" aria-label="Lihat harga dan dokumentasi Cohere">Harga & docs</a></div>
+</article>
+<article class="card" data-name="Cloudflare Workers AI" data-category="LLM, embedding, vision, audio" data-status="Free allowance" data-search="cloudflare workers ai llm, embedding, vision, audio free allowance ada jatah gratis harian; memerlukan akun cloudflare.">
+  <div class="top"><h3>Cloudflare Workers AI</h3><span class="status free">Free allowance</span></div>
+  <div class="category">LLM, embedding, vision, audio</div>
+  <div class="note">Ada jatah gratis harian; memerlukan akun Cloudflare.</div>
+  <div class="links"><a href="https://dash.cloudflare.com/" target="_blank" rel="noopener noreferrer" aria-label="Buka situs resmi atau daftar di Cloudflare Workers AI">Buka situs / daftar ↗</a><a class="secondary" href="https://developers.cloudflare.com/workers-ai/platform/pricing/" target="_blank" rel="noopener noreferrer" aria-label="Lihat harga dan dokumentasi Cloudflare Workers AI">Harga & docs</a></div>
+</article>
+<article class="card" data-name="SambaNova Cloud" data-category="LLM teks" data-status="Free tier terbatas" data-search="sambanova cloud llm teks free tier terbatas free access dapat bergantung pada kebijakan akun dan kapasitas.">
+  <div class="top"><h3>SambaNova Cloud</h3><span class="status free">Free tier terbatas</span></div>
+  <div class="category">LLM teks</div>
+  <div class="note">Free access dapat bergantung pada kebijakan akun dan kapasitas.</div>
+  <div class="links"><a href="https://cloud.sambanova.ai/" target="_blank" rel="noopener noreferrer" aria-label="Buka situs resmi atau daftar di SambaNova Cloud">Buka situs / daftar ↗</a><a class="secondary" href="https://cloud.sambanova.ai/" target="_blank" rel="noopener noreferrer" aria-label="Lihat harga dan dokumentasi SambaNova Cloud">Harga & docs</a></div>
+</article>
+<article class="card" data-name="NVIDIA Build / NIM" data-category="LLM, vision, speech" data-status="Free prototyping tier" data-search="nvidia build / nim llm, vision, speech free prototyping tier api key developer; model dan kuota dapat berbeda.">
+  <div class="top"><h3>NVIDIA Build / NIM</h3><span class="status">Free prototyping tier</span></div>
+  <div class="category">LLM, vision, speech</div>
+  <div class="note">API key developer; model dan kuota dapat berbeda.</div>
+  <div class="links"><a href="https://build.nvidia.com/" target="_blank" rel="noopener noreferrer" aria-label="Buka situs resmi atau daftar di NVIDIA Build / NIM">Buka situs / daftar ↗</a><a class="secondary" href="https://build.nvidia.com/" target="_blank" rel="noopener noreferrer" aria-label="Lihat harga dan dokumentasi NVIDIA Build / NIM">Harga & docs</a></div>
+</article>
+<article class="card" data-name="Cerebras Inference" data-category="LLM teks" data-status="Kredit percobaan" data-search="cerebras inference llm teks kredit percobaan kredit/akses percobaan dapat mensyaratkan verifikasi pembayaran.">
+  <div class="top"><h3>Cerebras Inference</h3><span class="status trial">Kredit percobaan</span></div>
+  <div class="category">LLM teks</div>
+  <div class="note">Kredit/akses percobaan dapat mensyaratkan verifikasi pembayaran.</div>
+  <div class="links"><a href="https://cloud.cerebras.ai/" target="_blank" rel="noopener noreferrer" aria-label="Buka situs resmi atau daftar di Cerebras Inference">Buka situs / daftar ↗</a><a class="secondary" href="https://www.cerebras.ai/inference" target="_blank" rel="noopener noreferrer" aria-label="Lihat harga dan dokumentasi Cerebras Inference">Harga & docs</a></div>
+</article>
+<article class="card" data-name="Fireworks AI" data-category="LLM, image, audio" data-status="Kredit percobaan" data-search="fireworks ai llm, image, audio kredit percobaan kredit awal dapat tersedia; selanjutnya berbayar.">
+  <div class="top"><h3>Fireworks AI</h3><span class="status trial">Kredit percobaan</span></div>
+  <div class="category">LLM, image, audio</div>
+  <div class="note">Kredit awal dapat tersedia; selanjutnya berbayar.</div>
+  <div class="links"><a href="https://fireworks.ai/" target="_blank" rel="noopener noreferrer" aria-label="Buka situs resmi atau daftar di Fireworks AI">Buka situs / daftar ↗</a><a class="secondary" href="https://fireworks.ai/pricing" target="_blank" rel="noopener noreferrer" aria-label="Lihat harga dan dokumentasi Fireworks AI">Harga & docs</a></div>
+</article>
+<article class="card" data-name="FreeTheAI" data-category="Gateway multi-model LLM" data-status="Free tier harian" data-search="freetheai gateway multi-model llm free tier harian kuota harian dan check-in; layanan pihak ketiga.">
+  <div class="top"><h3>FreeTheAI</h3><span class="status free">Free tier harian</span></div>
+  <div class="category">Gateway multi-model LLM</div>
+  <div class="note">Kuota harian dan check-in; layanan pihak ketiga.</div>
+  <div class="links"><a href="https://freetheai.org/" target="_blank" rel="noopener noreferrer" aria-label="Buka situs resmi atau daftar di FreeTheAI">Buka situs / daftar ↗</a><a class="secondary" href="https://docs.freetheai.org/getting-started/introduction" target="_blank" rel="noopener noreferrer" aria-label="Lihat harga dan dokumentasi FreeTheAI">Harga & docs</a></div>
+</article>
+<article class="card" data-name="OpenCode Zen Inference" data-category="LLM teks/coding" data-status="Promo model gratis" data-search="opencode zen inference llm teks/coding promo model gratis model gratis bersifat promo dan dapat berubah; cek model live.">
+  <div class="top"><h3>OpenCode Zen Inference</h3><span class="status free">Promo model gratis</span></div>
+  <div class="category">LLM teks/coding</div>
+  <div class="note">Model gratis bersifat promo dan dapat berubah; cek model live.</div>
+  <div class="links"><a href="https://opencode.ai/" target="_blank" rel="noopener noreferrer" aria-label="Buka situs resmi atau daftar di OpenCode Zen Inference">Buka situs / daftar ↗</a><a class="secondary" href="https://freeinference.dev/" target="_blank" rel="noopener noreferrer" aria-label="Lihat harga dan dokumentasi OpenCode Zen Inference">Harga & docs</a></div>
+</article>
+<article class="card" data-name="Kiro (AWS)" data-category="AI coding assistant" data-status="Akses gratis terbatas" data-search="kiro (aws) ai coding assistant akses gratis terbatas akses melalui produk/login; bukan api key generik untuk semua model.">
+  <div class="top"><h3>Kiro (AWS)</h3><span class="status">Akses gratis terbatas</span></div>
+  <div class="category">AI coding assistant</div>
+  <div class="note">Akses melalui produk/login; bukan API key generik untuk semua model.</div>
+  <div class="links"><a href="https://kiro.dev/" target="_blank" rel="noopener noreferrer" aria-label="Buka situs resmi atau daftar di Kiro (AWS)">Buka situs / daftar ↗</a><a class="secondary" href="https://kiro.dev/pricing/" target="_blank" rel="noopener noreferrer" aria-label="Lihat harga dan dokumentasi Kiro (AWS)">Harga & docs</a></div>
+</article>
+<article class="card" data-name="Google Cloud Vertex AI" data-category="LLM, vision, speech" data-status="Kredit/kuota cloud" data-search="google cloud vertex ai llm, vision, speech kredit/kuota cloud kredit percobaan google cloud dapat berlaku; setelahnya berbayar.">
+  <div class="top"><h3>Google Cloud Vertex AI</h3><span class="status trial">Kredit/kuota cloud</span></div>
+  <div class="category">LLM, vision, speech</div>
+  <div class="note">Kredit percobaan Google Cloud dapat berlaku; setelahnya berbayar.</div>
+  <div class="links"><a href="https://console.cloud.google.com/vertex-ai" target="_blank" rel="noopener noreferrer" aria-label="Buka situs resmi atau daftar di Google Cloud Vertex AI">Buka situs / daftar ↗</a><a class="secondary" href="https://cloud.google.com/vertex-ai/pricing" target="_blank" rel="noopener noreferrer" aria-label="Lihat harga dan dokumentasi Google Cloud Vertex AI">Harga & docs</a></div>
+</article>
+<article class="card" data-name="Hugging Face Inference Providers" data-category="Model teks, gambar, audio" data-status="Free credits sangat terbatas/berubah" data-search="hugging face inference providers model teks, gambar, audio free credits sangat terbatas/berubah token gratis untuk akun; inference umumnya memakai kredit/biaya.">
+  <div class="top"><h3>Hugging Face Inference Providers</h3><span class="status">Free credits sangat terbatas/berubah</span></div>
+  <div class="category">Model teks, gambar, audio</div>
+  <div class="note">Token gratis untuk akun; inference umumnya memakai kredit/biaya.</div>
+  <div class="links"><a href="https://huggingface.co/settings/tokens" target="_blank" rel="noopener noreferrer" aria-label="Buka situs resmi atau daftar di Hugging Face Inference Providers">Buka situs / daftar ↗</a><a class="secondary" href="https://huggingface.co/docs/inference-providers/pricing" target="_blank" rel="noopener noreferrer" aria-label="Lihat harga dan dokumentasi Hugging Face Inference Providers">Harga & docs</a></div>
+</article>
+<article class="card" data-name="Replicate" data-category="Gambar, video, audio, LLM" data-status="Trial/usage-based" data-search="replicate gambar, video, audio, llm trial/usage-based api token tersedia; inferensi umumnya berbayar setelah kredit.">
+  <div class="top"><h3>Replicate</h3><span class="status trial">Trial/usage-based</span></div>
+  <div class="category">Gambar, video, audio, LLM</div>
+  <div class="note">API token tersedia; inferensi umumnya berbayar setelah kredit.</div>
+  <div class="links"><a href="https://replicate.com/account/api-tokens" target="_blank" rel="noopener noreferrer" aria-label="Buka situs resmi atau daftar di Replicate">Buka situs / daftar ↗</a><a class="secondary" href="https://replicate.com/pricing" target="_blank" rel="noopener noreferrer" aria-label="Lihat harga dan dokumentasi Replicate">Harga & docs</a></div>
+</article>
+<article class="card" data-name="fal.ai" data-category="Gambar, video, audio" data-status="Trial/usage-based" data-search="fal.ai gambar, video, audio trial/usage-based kredit/akses promosi dapat berubah; mayoritas penggunaan berbayar.">
+  <div class="top"><h3>fal.ai</h3><span class="status trial">Trial/usage-based</span></div>
+  <div class="category">Gambar, video, audio</div>
+  <div class="note">Kredit/akses promosi dapat berubah; mayoritas penggunaan berbayar.</div>
+  <div class="links"><a href="https://fal.ai/dashboard/keys" target="_blank" rel="noopener noreferrer" aria-label="Buka situs resmi atau daftar di fal.ai">Buka situs / daftar ↗</a><a class="secondary" href="https://fal.ai/pricing" target="_blank" rel="noopener noreferrer" aria-label="Lihat harga dan dokumentasi fal.ai">Harga & docs</a></div>
+</article>
+<article class="card" data-name="DeepInfra" data-category="LLM, image, audio" data-status="Kredit/usage-based" data-search="deepinfra llm, image, audio kredit/usage-based cek saldo dan harga model; jangan diasumsikan gratis permanen.">
+  <div class="top"><h3>DeepInfra</h3><span class="status trial">Kredit/usage-based</span></div>
+  <div class="category">LLM, image, audio</div>
+  <div class="note">Cek saldo dan harga model; jangan diasumsikan gratis permanen.</div>
+  <div class="links"><a href="https://deepinfra.com/dash/api_keys" target="_blank" rel="noopener noreferrer" aria-label="Buka situs resmi atau daftar di DeepInfra">Buka situs / daftar ↗</a><a class="secondary" href="https://deepinfra.com/pricing" target="_blank" rel="noopener noreferrer" aria-label="Lihat harga dan dokumentasi DeepInfra">Harga & docs</a></div>
+</article>
+<article class="card" data-name="Together AI" data-category="LLM, image, video" data-status="Trial/usage-based" data-search="together ai llm, image, video trial/usage-based kredit atau promosi dapat berubah; layanan utama berbayar.">
+  <div class="top"><h3>Together AI</h3><span class="status trial">Trial/usage-based</span></div>
+  <div class="category">LLM, image, video</div>
+  <div class="note">Kredit atau promosi dapat berubah; layanan utama berbayar.</div>
+  <div class="links"><a href="https://api.together.ai/settings/api-keys" target="_blank" rel="noopener noreferrer" aria-label="Buka situs resmi atau daftar di Together AI">Buka situs / daftar ↗</a><a class="secondary" href="https://www.together.ai/pricing" target="_blank" rel="noopener noreferrer" aria-label="Lihat harga dan dokumentasi Together AI">Harga & docs</a></div>
+</article>
+<article class="card" data-name="AIMLAPI" data-category="LLM, image, audio" data-status="Trial/usage-based" data-search="aimlapi llm, image, audio trial/usage-based periksa kredit promo dan harga per model.">
+  <div class="top"><h3>AIMLAPI</h3><span class="status trial">Trial/usage-based</span></div>
+  <div class="category">LLM, image, audio</div>
+  <div class="note">Periksa kredit promo dan harga per model.</div>
+  <div class="links"><a href="https://aimlapi.com/app/keys" target="_blank" rel="noopener noreferrer" aria-label="Buka situs resmi atau daftar di AIMLAPI">Buka situs / daftar ↗</a><a class="secondary" href="https://aimlapi.com/pricing" target="_blank" rel="noopener noreferrer" aria-label="Lihat harga dan dokumentasi AIMLAPI">Harga & docs</a></div>
+</article>
+<article class="card" data-name="Novita AI" data-category="LLM, image, video" data-status="Trial/usage-based" data-search="novita ai llm, image, video trial/usage-based kredit promo dapat tersedia; penggunaan selanjutnya berbayar.">
+  <div class="top"><h3>Novita AI</h3><span class="status trial">Trial/usage-based</span></div>
+  <div class="category">LLM, image, video</div>
+  <div class="note">Kredit promo dapat tersedia; penggunaan selanjutnya berbayar.</div>
+  <div class="links"><a href="https://novita.ai/" target="_blank" rel="noopener noreferrer" aria-label="Buka situs resmi atau daftar di Novita AI">Buka situs / daftar ↗</a><a class="secondary" href="https://novita.ai/pricing" target="_blank" rel="noopener noreferrer" aria-label="Lihat harga dan dokumentasi Novita AI">Harga & docs</a></div>
+</article>
+<article class="card" data-name="SiliconFlow" data-category="LLM, image, speech" data-status="Free quota/model tertentu" data-search="siliconflow llm, image, speech free quota/model tertentu model dan kuota gratis dapat berubah menurut akun/wilayah.">
+  <div class="top"><h3>SiliconFlow</h3><span class="status free">Free quota/model tertentu</span></div>
+  <div class="category">LLM, image, speech</div>
+  <div class="note">Model dan kuota gratis dapat berubah menurut akun/wilayah.</div>
+  <div class="links"><a href="https://cloud.siliconflow.com/" target="_blank" rel="noopener noreferrer" aria-label="Buka situs resmi atau daftar di SiliconFlow">Buka situs / daftar ↗</a><a class="secondary" href="https://siliconflow.com/pricing" target="_blank" rel="noopener noreferrer" aria-label="Lihat harga dan dokumentasi SiliconFlow">Harga & docs</a></div>
+</article>
+<article class="card" data-name="ModelScope" data-category="Model inference, image, video" data-status="Free trial/model tertentu" data-search="modelscope model inference, image, video free trial/model tertentu akses demo dan api bergantung model serta layanan.">
+  <div class="top"><h3>ModelScope</h3><span class="status trial">Free trial/model tertentu</span></div>
+  <div class="category">Model inference, image, video</div>
+  <div class="note">Akses demo dan API bergantung model serta layanan.</div>
+  <div class="links"><a href="https://modelscope.cn/" target="_blank" rel="noopener noreferrer" aria-label="Buka situs resmi atau daftar di ModelScope">Buka situs / daftar ↗</a><a class="secondary" href="https://www.modelscope.cn/docs" target="_blank" rel="noopener noreferrer" aria-label="Lihat harga dan dokumentasi ModelScope">Harga & docs</a></div>
+</article>
+<article class="card" data-name="阿里云百炼 / Alibaba Model Studio" data-category="LLM, image, speech" data-status="Free quota/trial tertentu" data-search="阿里云百炼 / alibaba model studio llm, image, speech free quota/trial tertentu kuota gratis tergantung model, wilayah, dan promosi.">
+  <div class="top"><h3>阿里云百炼 / Alibaba Model Studio</h3><span class="status free">Free quota/trial tertentu</span></div>
+  <div class="category">LLM, image, speech</div>
+  <div class="note">Kuota gratis tergantung model, wilayah, dan promosi.</div>
+  <div class="links"><a href="https://bailian.console.aliyun.com/" target="_blank" rel="noopener noreferrer" aria-label="Buka situs resmi atau daftar di 阿里云百炼 / Alibaba Model Studio">Buka situs / daftar ↗</a><a class="secondary" href="https://www.alibabacloud.com/help/en/model-studio/" target="_blank" rel="noopener noreferrer" aria-label="Lihat harga dan dokumentasi 阿里云百炼 / Alibaba Model Studio">Harga & docs</a></div>
+</article>
+<article class="card" data-name="百度智能云千帆 / Baidu Qianfan" data-category="LLM, embedding" data-status="Free trial/credit tertentu" data-search="百度智能云千帆 / baidu qianfan llm, embedding free trial/credit tertentu periksa paket dan kuota untuk akun/wilayah.">
+  <div class="top"><h3>百度智能云千帆 / Baidu Qianfan</h3><span class="status trial">Free trial/credit tertentu</span></div>
+  <div class="category">LLM, embedding</div>
+  <div class="note">Periksa paket dan kuota untuk akun/wilayah.</div>
+  <div class="links"><a href="https://console.bce.baidu.com/qianfan/" target="_blank" rel="noopener noreferrer" aria-label="Buka situs resmi atau daftar di 百度智能云千帆 / Baidu Qianfan">Buka situs / daftar ↗</a><a class="secondary" href="https://cloud.baidu.com/product/wenxinworkshop" target="_blank" rel="noopener noreferrer" aria-label="Lihat harga dan dokumentasi 百度智能云千帆 / Baidu Qianfan">Harga & docs</a></div>
+</article>
+<article class="card" data-name="智谱 BigModel / Zhipu AI" data-category="LLM, coding, image" data-status="Free quota/model tertentu" data-search="智谱 bigmodel / zhipu ai llm, coding, image free quota/model tertentu model gratis dan kuota dapat berubah.">
+  <div class="top"><h3>智谱 BigModel / Zhipu AI</h3><span class="status free">Free quota/model tertentu</span></div>
+  <div class="category">LLM, coding, image</div>
+  <div class="note">Model gratis dan kuota dapat berubah.</div>
+  <div class="links"><a href="https://open.bigmodel.cn/" target="_blank" rel="noopener noreferrer" aria-label="Buka situs resmi atau daftar di 智谱 BigModel / Zhipu AI">Buka situs / daftar ↗</a><a class="secondary" href="https://open.bigmodel.cn/dev/howuse/model" target="_blank" rel="noopener noreferrer" aria-label="Lihat harga dan dokumentasi 智谱 BigModel / Zhipu AI">Harga & docs</a></div>
+</article>
+<article class="card" data-name="Moonshot AI / Kimi API" data-category="LLM teks" data-status="Trial/usage-based" data-search="moonshot ai / kimi api llm teks trial/usage-based cek kredit promosi; jangan dianggap gratis permanen.">
+  <div class="top"><h3>Moonshot AI / Kimi API</h3><span class="status trial">Trial/usage-based</span></div>
+  <div class="category">LLM teks</div>
+  <div class="note">Cek kredit promosi; jangan dianggap gratis permanen.</div>
+  <div class="links"><a href="https://platform.moonshot.cn/" target="_blank" rel="noopener noreferrer" aria-label="Buka situs resmi atau daftar di Moonshot AI / Kimi API">Buka situs / daftar ↗</a><a class="secondary" href="https://platform.moonshot.cn/docs" target="_blank" rel="noopener noreferrer" aria-label="Lihat harga dan dokumentasi Moonshot AI / Kimi API">Harga & docs</a></div>
+</article>
+<article class="card" data-name="MiniMax API" data-category="LLM, speech, video" data-status="Trial/usage-based" data-search="minimax api llm, speech, video trial/usage-based harga dan promo berbeda per produk/wilayah.">
+  <div class="top"><h3>MiniMax API</h3><span class="status trial">Trial/usage-based</span></div>
+  <div class="category">LLM, speech, video</div>
+  <div class="note">Harga dan promo berbeda per produk/wilayah.</div>
+  <div class="links"><a href="https://platform.minimaxi.com/" target="_blank" rel="noopener noreferrer" aria-label="Buka situs resmi atau daftar di MiniMax API">Buka situs / daftar ↗</a><a class="secondary" href="https://platform.minimaxi.com/document/" target="_blank" rel="noopener noreferrer" aria-label="Lihat harga dan dokumentasi MiniMax API">Harga & docs</a></div>
+</article>
+<article class="card" data-name="DeepSeek API" data-category="LLM teks" data-status="Berbayar / promo jika tersedia" data-search="deepseek api llm teks berbayar / promo jika tersedia api key tersedia; jangan diasumsikan memiliki kuota gratis.">
+  <div class="top"><h3>DeepSeek API</h3><span class="status trial">Berbayar / promo jika tersedia</span></div>
+  <div class="category">LLM teks</div>
+  <div class="note">API key tersedia; jangan diasumsikan memiliki kuota gratis.</div>
+  <div class="links"><a href="https://platform.deepseek.com/api_keys" target="_blank" rel="noopener noreferrer" aria-label="Buka situs resmi atau daftar di DeepSeek API">Buka situs / daftar ↗</a><a class="secondary" href="https://api-docs.deepseek.com/quick_start/pricing" target="_blank" rel="noopener noreferrer" aria-label="Lihat harga dan dokumentasi DeepSeek API">Harga & docs</a></div>
+</article>
+<article class="card" data-name="Anthropic Claude API" data-category="LLM teks, vision" data-status="Kredit promo jika tersedia" data-search="anthropic claude api llm teks, vision kredit promo jika tersedia api umumnya berbayar; promo tidak selalu tersedia.">
+  <div class="top"><h3>Anthropic Claude API</h3><span class="status trial">Kredit promo jika tersedia</span></div>
+  <div class="category">LLM teks, vision</div>
+  <div class="note">API umumnya berbayar; promo tidak selalu tersedia.</div>
+  <div class="links"><a href="https://console.anthropic.com/settings/keys" target="_blank" rel="noopener noreferrer" aria-label="Buka situs resmi atau daftar di Anthropic Claude API">Buka situs / daftar ↗</a><a class="secondary" href="https://www.anthropic.com/pricing" target="_blank" rel="noopener noreferrer" aria-label="Lihat harga dan dokumentasi Anthropic Claude API">Harga & docs</a></div>
+</article>
+<article class="card" data-name="OpenAI API" data-category="LLM, image, audio, video tools" data-status="Berbayar; promo akun tertentu" data-search="openai api llm, image, audio, video tools berbayar; promo akun tertentu chatgpt gratis tidak berarti api gratis.">
+  <div class="top"><h3>OpenAI API</h3><span class="status trial">Berbayar; promo akun tertentu</span></div>
+  <div class="category">LLM, image, audio, video tools</div>
+  <div class="note">ChatGPT gratis tidak berarti API gratis.</div>
+  <div class="links"><a href="https://platform.openai.com/api-keys" target="_blank" rel="noopener noreferrer" aria-label="Buka situs resmi atau daftar di OpenAI API">Buka situs / daftar ↗</a><a class="secondary" href="https://openai.com/api/pricing/" target="_blank" rel="noopener noreferrer" aria-label="Lihat harga dan dokumentasi OpenAI API">Harga & docs</a></div>
+</article>
+<article class="card" data-name="xAI Grok API" data-category="LLM, image" data-status="Berbayar / kredit jika ditawarkan" data-search="xai grok api llm, image berbayar / kredit jika ditawarkan cek billing dan promo akun.">
+  <div class="top"><h3>xAI Grok API</h3><span class="status trial">Berbayar / kredit jika ditawarkan</span></div>
+  <div class="category">LLM, image</div>
+  <div class="note">Cek billing dan promo akun.</div>
+  <div class="links"><a href="https://console.x.ai/" target="_blank" rel="noopener noreferrer" aria-label="Buka situs resmi atau daftar di xAI Grok API">Buka situs / daftar ↗</a><a class="secondary" href="https://docs.x.ai/docs/overview" target="_blank" rel="noopener noreferrer" aria-label="Lihat harga dan dokumentasi xAI Grok API">Harga & docs</a></div>
+</article>
+<article class="card" data-name="AI21 Labs" data-category="LLM teks" data-status="Trial terbatas jika tersedia" data-search="ai21 labs llm teks trial terbatas jika tersedia periksa kuota trial terbaru.">
+  <div class="top"><h3>AI21 Labs</h3><span class="status trial">Trial terbatas jika tersedia</span></div>
+  <div class="category">LLM teks</div>
+  <div class="note">Periksa kuota trial terbaru.</div>
+  <div class="links"><a href="https://studio.ai21.com/" target="_blank" rel="noopener noreferrer" aria-label="Buka situs resmi atau daftar di AI21 Labs">Buka situs / daftar ↗</a><a class="secondary" href="https://www.ai21.com/pricing/" target="_blank" rel="noopener noreferrer" aria-label="Lihat harga dan dokumentasi AI21 Labs">Harga & docs</a></div>
+</article>
+<article class="card" data-name="Writer API" data-category="LLM enterprise" data-status="Trial/demo" data-search="writer api llm enterprise trial/demo akses api dapat memerlukan paket atau persetujuan.">
+  <div class="top"><h3>Writer API</h3><span class="status trial">Trial/demo</span></div>
+  <div class="category">LLM enterprise</div>
+  <div class="note">Akses API dapat memerlukan paket atau persetujuan.</div>
+  <div class="links"><a href="https://dev.writer.com/" target="_blank" rel="noopener noreferrer" aria-label="Buka situs resmi atau daftar di Writer API">Buka situs / daftar ↗</a><a class="secondary" href="https://writer.com/pricing/" target="_blank" rel="noopener noreferrer" aria-label="Lihat harga dan dokumentasi Writer API">Harga & docs</a></div>
+</article>
+<article class="card" data-name="Aleph Alpha" data-category="LLM, document AI" data-status="Trial/enterprise" data-search="aleph alpha llm, document ai trial/enterprise akses dan harga bergantung paket.">
+  <div class="top"><h3>Aleph Alpha</h3><span class="status trial">Trial/enterprise</span></div>
+  <div class="category">LLM, document AI</div>
+  <div class="note">Akses dan harga bergantung paket.</div>
+  <div class="links"><a href="https://console.aleph-alpha.com/" target="_blank" rel="noopener noreferrer" aria-label="Buka situs resmi atau daftar di Aleph Alpha">Buka situs / daftar ↗</a><a class="secondary" href="https://www.aleph-alpha.com/" target="_blank" rel="noopener noreferrer" aria-label="Lihat harga dan dokumentasi Aleph Alpha">Harga & docs</a></div>
+</article>
+<article class="card" data-name="Lepton AI" data-category="LLM, image" data-status="Trial/usage-based" data-search="lepton ai llm, image trial/usage-based periksa status produk, kredit, dan billing.">
+  <div class="top"><h3>Lepton AI</h3><span class="status trial">Trial/usage-based</span></div>
+  <div class="category">LLM, image</div>
+  <div class="note">Periksa status produk, kredit, dan billing.</div>
+  <div class="links"><a href="https://www.lepton.ai/" target="_blank" rel="noopener noreferrer" aria-label="Buka situs resmi atau daftar di Lepton AI">Buka situs / daftar ↗</a><a class="secondary" href="https://www.lepton.ai/" target="_blank" rel="noopener noreferrer" aria-label="Lihat harga dan dokumentasi Lepton AI">Harga & docs</a></div>
+</article>
+<article class="card" data-name="Baseten" data-category="Model serving, LLM, vision" data-status="Trial/usage-based" data-search="baseten model serving, llm, vision trial/usage-based platform inference; kredit trial dapat berubah.">
+  <div class="top"><h3>Baseten</h3><span class="status trial">Trial/usage-based</span></div>
+  <div class="category">Model serving, LLM, vision</div>
+  <div class="note">Platform inference; kredit trial dapat berubah.</div>
+  <div class="links"><a href="https://www.baseten.co/" target="_blank" rel="noopener noreferrer" aria-label="Buka situs resmi atau daftar di Baseten">Buka situs / daftar ↗</a><a class="secondary" href="https://www.baseten.co/pricing/" target="_blank" rel="noopener noreferrer" aria-label="Lihat harga dan dokumentasi Baseten">Harga & docs</a></div>
+</article>
+<article class="card" data-name="Modal" data-category="Serverless GPU/AI" data-status="Free developer allowance" data-search="modal serverless gpu/ai free developer allowance jatah gratis platform, bukan api model gratis tanpa batas.">
+  <div class="top"><h3>Modal</h3><span class="status">Free developer allowance</span></div>
+  <div class="category">Serverless GPU/AI</div>
+  <div class="note">Jatah gratis platform, bukan API model gratis tanpa batas.</div>
+  <div class="links"><a href="https://modal.com/" target="_blank" rel="noopener noreferrer" aria-label="Buka situs resmi atau daftar di Modal">Buka situs / daftar ↗</a><a class="secondary" href="https://modal.com/pricing" target="_blank" rel="noopener noreferrer" aria-label="Lihat harga dan dokumentasi Modal">Harga & docs</a></div>
+</article>
+<article class="card" data-name="RunPod Serverless" data-category="LLM, image, video" data-status="Kredit/promosi jika tersedia" data-search="runpod serverless llm, image, video kredit/promosi jika tersedia umumnya bayar sesuai pemakaian gpu.">
+  <div class="top"><h3>RunPod Serverless</h3><span class="status trial">Kredit/promosi jika tersedia</span></div>
+  <div class="category">LLM, image, video</div>
+  <div class="note">Umumnya bayar sesuai pemakaian GPU.</div>
+  <div class="links"><a href="https://www.runpod.io/console/serverless" target="_blank" rel="noopener noreferrer" aria-label="Buka situs resmi atau daftar di RunPod Serverless">Buka situs / daftar ↗</a><a class="secondary" href="https://www.runpod.io/pricing" target="_blank" rel="noopener noreferrer" aria-label="Lihat harga dan dokumentasi RunPod Serverless">Harga & docs</a></div>
+</article>
+<article class="card" data-name="Stability AI" data-category="Image, audio/video tools" data-status="Trial/usage-based" data-search="stability ai image, audio/video tools trial/usage-based kredit gratis tidak selalu tersedia untuk akun baru.">
+  <div class="top"><h3>Stability AI</h3><span class="status trial">Trial/usage-based</span></div>
+  <div class="category">Image, audio/video tools</div>
+  <div class="note">Kredit gratis tidak selalu tersedia untuk akun baru.</div>
+  <div class="links"><a href="https://platform.stability.ai/account/keys" target="_blank" rel="noopener noreferrer" aria-label="Buka situs resmi atau daftar di Stability AI">Buka situs / daftar ↗</a><a class="secondary" href="https://stability.ai/pricing" target="_blank" rel="noopener noreferrer" aria-label="Lihat harga dan dokumentasi Stability AI">Harga & docs</a></div>
+</article>
+<article class="card" data-name="Luma AI" data-category="Video generation" data-status="Web trial; API berbayar/akses terbatas" data-search="luma ai video generation web trial; api berbayar/akses terbatas akses api dan paket berbeda dari kuota aplikasi web.">
+  <div class="top"><h3>Luma AI</h3><span class="status trial">Web trial; API berbayar/akses terbatas</span></div>
+  <div class="category">Video generation</div>
+  <div class="note">Akses API dan paket berbeda dari kuota aplikasi web.</div>
+  <div class="links"><a href="https://lumalabs.ai/" target="_blank" rel="noopener noreferrer" aria-label="Buka situs resmi atau daftar di Luma AI">Buka situs / daftar ↗</a><a class="secondary" href="https://lumalabs.ai/api" target="_blank" rel="noopener noreferrer" aria-label="Lihat harga dan dokumentasi Luma AI">Harga & docs</a></div>
+</article>
+<article class="card" data-name="Runway" data-category="Video generation" data-status="Web trial; API berbayar" data-search="runway video generation web trial; api berbayar api tidak otomatis gratis karena aplikasi web punya free credits.">
+  <div class="top"><h3>Runway</h3><span class="status trial">Web trial; API berbayar</span></div>
+  <div class="category">Video generation</div>
+  <div class="note">API tidak otomatis gratis karena aplikasi web punya free credits.</div>
+  <div class="links"><a href="https://runwayml.com/" target="_blank" rel="noopener noreferrer" aria-label="Buka situs resmi atau daftar di Runway">Buka situs / daftar ↗</a><a class="secondary" href="https://docs.dev.runwayml.com/" target="_blank" rel="noopener noreferrer" aria-label="Lihat harga dan dokumentasi Runway">Harga & docs</a></div>
+</article>
+<article class="card" data-name="ElevenLabs" data-category="Text-to-speech, voice" data-status="Free tier terbatas" data-search="elevenlabs text-to-speech, voice free tier terbatas paket gratis dengan batas karakter/fitur; cek ketentuan api.">
+  <div class="top"><h3>ElevenLabs</h3><span class="status free">Free tier terbatas</span></div>
+  <div class="category">Text-to-speech, voice</div>
+  <div class="note">Paket gratis dengan batas karakter/fitur; cek ketentuan API.</div>
+  <div class="links"><a href="https://elevenlabs.io/app/settings/api-keys" target="_blank" rel="noopener noreferrer" aria-label="Buka situs resmi atau daftar di ElevenLabs">Buka situs / daftar ↗</a><a class="secondary" href="https://elevenlabs.io/pricing" target="_blank" rel="noopener noreferrer" aria-label="Lihat harga dan dokumentasi ElevenLabs">Harga & docs</a></div>
+</article>
+<article class="card" data-name="Deepgram" data-category="Speech-to-text, voice" data-status="Trial credit" data-search="deepgram speech-to-text, voice trial credit kredit awal dapat tersedia; setelah itu usage-based.">
+  <div class="top"><h3>Deepgram</h3><span class="status trial">Trial credit</span></div>
+  <div class="category">Speech-to-text, voice</div>
+  <div class="note">Kredit awal dapat tersedia; setelah itu usage-based.</div>
+  <div class="links"><a href="https://console.deepgram.com/" target="_blank" rel="noopener noreferrer" aria-label="Buka situs resmi atau daftar di Deepgram">Buka situs / daftar ↗</a><a class="secondary" href="https://deepgram.com/pricing" target="_blank" rel="noopener noreferrer" aria-label="Lihat harga dan dokumentasi Deepgram">Harga & docs</a></div>
+</article>
+<article class="card" data-name="AssemblyAI" data-category="Speech-to-text" data-status="Trial credit" data-search="assemblyai speech-to-text trial credit kredit percobaan; penggunaan berikutnya berbayar.">
+  <div class="top"><h3>AssemblyAI</h3><span class="status trial">Trial credit</span></div>
+  <div class="category">Speech-to-text</div>
+  <div class="note">Kredit percobaan; penggunaan berikutnya berbayar.</div>
+  <div class="links"><a href="https://www.assemblyai.com/dashboard/signup" target="_blank" rel="noopener noreferrer" aria-label="Buka situs resmi atau daftar di AssemblyAI">Buka situs / daftar ↗</a><a class="secondary" href="https://www.assemblyai.com/pricing" target="_blank" rel="noopener noreferrer" aria-label="Lihat harga dan dokumentasi AssemblyAI">Harga & docs</a></div>
+</article>
+<article class="card" data-name="Gladia" data-category="Speech-to-text, audio intelligence" data-status="Free tier/trial" data-search="gladia speech-to-text, audio intelligence free tier/trial kuota dan harga dapat berubah.">
+  <div class="top"><h3>Gladia</h3><span class="status free">Free tier/trial</span></div>
+  <div class="category">Speech-to-text, audio intelligence</div>
+  <div class="note">Kuota dan harga dapat berubah.</div>
+  <div class="links"><a href="https://dashboard.gladia.io/" target="_blank" rel="noopener noreferrer" aria-label="Buka situs resmi atau daftar di Gladia">Buka situs / daftar ↗</a><a class="secondary" href="https://www.gladia.io/pricing" target="_blank" rel="noopener noreferrer" aria-label="Lihat harga dan dokumentasi Gladia">Harga & docs</a></div>
+</article>
+<article class="card" data-name="Cartesia" data-category="Text-to-speech, voice" data-status="Trial/free allowance jika tersedia" data-search="cartesia text-to-speech, voice trial/free allowance jika tersedia cek paket saat pendaftaran.">
+  <div class="top"><h3>Cartesia</h3><span class="status free">Trial/free allowance jika tersedia</span></div>
+  <div class="category">Text-to-speech, voice</div>
+  <div class="note">Cek paket saat pendaftaran.</div>
+  <div class="links"><a href="https://play.cartesia.ai/" target="_blank" rel="noopener noreferrer" aria-label="Buka situs resmi atau daftar di Cartesia">Buka situs / daftar ↗</a><a class="secondary" href="https://cartesia.ai/pricing" target="_blank" rel="noopener noreferrer" aria-label="Lihat harga dan dokumentasi Cartesia">Harga & docs</a></div>
+</article>
+<article class="card" data-name="Audd.io" data-category="Music recognition" data-status="Trial/demo" data-search="audd.io music recognition trial/demo api pengenal musik; kuota gratis penuh tidak dijamin.">
+  <div class="top"><h3>Audd.io</h3><span class="status trial">Trial/demo</span></div>
+  <div class="category">Music recognition</div>
+  <div class="note">API pengenal musik; kuota gratis penuh tidak dijamin.</div>
+  <div class="links"><a href="https://audd.io/" target="_blank" rel="noopener noreferrer" aria-label="Buka situs resmi atau daftar di Audd.io">Buka situs / daftar ↗</a><a class="secondary" href="https://audd.io/" target="_blank" rel="noopener noreferrer" aria-label="Lihat harga dan dokumentasi Audd.io">Harga & docs</a></div>
+</article>
+<article class="card" data-name="Musixmatch API" data-category="Lyrics / music metadata" data-status="Developer access by approval" data-search="musixmatch api lyrics / music metadata developer access by approval akses dan penggunaan tunduk pada lisensi/approval.">
+  <div class="top"><h3>Musixmatch API</h3><span class="status">Developer access by approval</span></div>
+  <div class="category">Lyrics / music metadata</div>
+  <div class="note">Akses dan penggunaan tunduk pada lisensi/approval.</div>
+  <div class="links"><a href="https://developer.musixmatch.com/" target="_blank" rel="noopener noreferrer" aria-label="Buka situs resmi atau daftar di Musixmatch API">Buka situs / daftar ↗</a><a class="secondary" href="https://developer.musixmatch.com/" target="_blank" rel="noopener noreferrer" aria-label="Lihat harga dan dokumentasi Musixmatch API">Harga & docs</a></div>
+</article>
+<article class="card" data-name="Ollama" data-category="Local LLM API" data-status="Gratis self-hosted" data-search="ollama local llm api gratis self-hosted menjalankan model di komputer sendiri; tidak butuh api key cloud.">
+  <div class="top"><h3>Ollama</h3><span class="status free">Gratis self-hosted</span></div>
+  <div class="category">Local LLM API</div>
+  <div class="note">Menjalankan model di komputer sendiri; tidak butuh API key cloud.</div>
+  <div class="links"><a href="https://ollama.com/" target="_blank" rel="noopener noreferrer" aria-label="Buka situs resmi atau daftar di Ollama">Buka situs / daftar ↗</a><a class="secondary" href="https://github.com/ollama/ollama/blob/main/docs/api.md" target="_blank" rel="noopener noreferrer" aria-label="Lihat harga dan dokumentasi Ollama">Harga & docs</a></div>
+</article>
+</section><div class="empty" id="empty" role="status">Tidak ada hasil yang cocok.</div>
 <footer><b>Keamanan:</b> Jangan menaruh API key di HTML/JavaScript frontend publik. Simpan key di backend atau environment variables. Jangan pernah membagikan key pribadi. Direktori ini berisi tautan resmi, bukan API key siap pakai.<br><br>Referensi pemeriksaan: halaman harga/dokumentasi resmi masing-masing penyedia dan direktori FreeInference.dev. Beberapa layanan trial/promo dicantumkan transparan, bukan diklaim gratis selamanya.</footer>
 </main>
 <script>
-const items=[{"name": "Google AI Studio / Gemini", "category": "Teks, gambar, audio, video", "status": "Free tier", "signup": "https://aistudio.google.com/apikey", "pricing": "https://ai.google.dev/gemini-api/docs/pricing", "note": "Kuota gratis untuk model tertentu; batas per project dan model."}, {"name": "GroqCloud", "category": "LLM teks, audio", "status": "Free tier", "signup": "https://console.groq.com/keys", "pricing": "https://console.groq.com/docs/rate-limits", "note": "Free plan dengan rate limit per model."}, {"name": "OpenRouter", "category": "Multi-model: teks, gambar, audio", "status": "Model gratis terbatas", "signup": "https://openrouter.ai/keys", "pricing": "https://openrouter.ai/models?max_price=0", "note": "Pilih model bertanda :free; ada batas permintaan."}, {"name": "Mistral AI", "category": "LLM teks, embedding, OCR", "status": "Free tier / trial", "signup": "https://console.mistral.ai/api-keys/", "pricing": "https://docs.mistral.ai/deployment/ai-studio/tier/", "note": "Free Experiment plan untuk prototipe; batas berlaku."}, {"name": "Cohere", "category": "Chat, rerank, embedding", "status": "Trial gratis terbatas", "signup": "https://dashboard.cohere.com/api-keys", "pricing": "https://cohere.com/pricing", "note": "Trial key dengan batas penggunaan."}, {"name": "Cloudflare Workers AI", "category": "LLM, embedding, vision, audio", "status": "Free allowance", "signup": "https://dash.cloudflare.com/", "pricing": "https://developers.cloudflare.com/workers-ai/platform/pricing/", "note": "Ada jatah gratis harian; memerlukan akun Cloudflare."}, {"name": "SambaNova Cloud", "category": "LLM teks", "status": "Free tier terbatas", "signup": "https://cloud.sambanova.ai/", "pricing": "https://cloud.sambanova.ai/", "note": "Free access dapat bergantung pada kebijakan akun dan kapasitas."}, {"name": "NVIDIA Build / NIM", "category": "LLM, vision, speech", "status": "Free prototyping tier", "signup": "https://build.nvidia.com/", "pricing": "https://build.nvidia.com/", "note": "API key developer; model dan kuota dapat berbeda."}, {"name": "Cerebras Inference", "category": "LLM teks", "status": "Kredit percobaan", "signup": "https://cloud.cerebras.ai/", "pricing": "https://www.cerebras.ai/inference", "note": "Kredit/akses percobaan dapat mensyaratkan verifikasi pembayaran."}, {"name": "Fireworks AI", "category": "LLM, image, audio", "status": "Kredit percobaan", "signup": "https://fireworks.ai/", "pricing": "https://fireworks.ai/pricing", "note": "Kredit awal dapat tersedia; selanjutnya berbayar."}, {"name": "FreeTheAI", "category": "Gateway multi-model LLM", "status": "Free tier harian", "signup": "https://freetheai.org/", "pricing": "https://docs.freetheai.org/getting-started/introduction", "note": "Kuota harian dan check-in; layanan pihak ketiga."}, {"name": "OpenCode Zen Inference", "category": "LLM teks/coding", "status": "Promo model gratis", "signup": "https://opencode.ai/", "pricing": "https://freeinference.dev/", "note": "Model gratis bersifat promo dan dapat berubah; cek model live."}, {"name": "Kiro (AWS)", "category": "AI coding assistant", "status": "Akses gratis terbatas", "signup": "https://kiro.dev/", "pricing": "https://kiro.dev/pricing/", "note": "Akses melalui produk/login; bukan API key generik untuk semua model."}, {"name": "Google Cloud Vertex AI", "category": "LLM, vision, speech", "status": "Kredit/kuota cloud", "signup": "https://console.cloud.google.com/vertex-ai", "pricing": "https://cloud.google.com/vertex-ai/pricing", "note": "Kredit percobaan Google Cloud dapat berlaku; setelahnya berbayar."}, {"name": "Hugging Face Inference Providers", "category": "Model teks, gambar, audio", "status": "Free credits sangat terbatas/berubah", "signup": "https://huggingface.co/settings/tokens", "pricing": "https://huggingface.co/docs/inference-providers/pricing", "note": "Token gratis untuk akun; inference umumnya memakai kredit/biaya."}, {"name": "Replicate", "category": "Gambar, video, audio, LLM", "status": "Trial/usage-based", "signup": "https://replicate.com/account/api-tokens", "pricing": "https://replicate.com/pricing", "note": "API token tersedia; inferensi umumnya berbayar setelah kredit."}, {"name": "fal.ai", "category": "Gambar, video, audio", "status": "Trial/usage-based", "signup": "https://fal.ai/dashboard/keys", "pricing": "https://fal.ai/pricing", "note": "Kredit/akses promosi dapat berubah; mayoritas penggunaan berbayar."}, {"name": "DeepInfra", "category": "LLM, image, audio", "status": "Kredit/usage-based", "signup": "https://deepinfra.com/dash/api_keys", "pricing": "https://deepinfra.com/pricing", "note": "Cek saldo dan harga model; jangan diasumsikan gratis permanen."}, {"name": "Together AI", "category": "LLM, image, video", "status": "Trial/usage-based", "signup": "https://api.together.ai/settings/api-keys", "pricing": "https://www.together.ai/pricing", "note": "Kredit atau promosi dapat berubah; layanan utama berbayar."}, {"name": "AIMLAPI", "category": "LLM, image, audio", "status": "Trial/usage-based", "signup": "https://aimlapi.com/app/keys", "pricing": "https://aimlapi.com/pricing", "note": "Periksa kredit promo dan harga per model."}, {"name": "Novita AI", "category": "LLM, image, video", "status": "Trial/usage-based", "signup": "https://novita.ai/", "pricing": "https://novita.ai/pricing", "note": "Kredit promo dapat tersedia; penggunaan selanjutnya berbayar."}, {"name": "SiliconFlow", "category": "LLM, image, speech", "status": "Free quota/model tertentu", "signup": "https://cloud.siliconflow.com/", "pricing": "https://siliconflow.com/pricing", "note": "Model dan kuota gratis dapat berubah menurut akun/wilayah."}, {"name": "ModelScope", "category": "Model inference, image, video", "status": "Free trial/model tertentu", "signup": "https://modelscope.cn/", "pricing": "https://www.modelscope.cn/docs", "note": "Akses demo dan API bergantung model serta layanan."}, {"name": "阿里云百炼 / Alibaba Model Studio", "category": "LLM, image, speech", "status": "Free quota/trial tertentu", "signup": "https://bailian.console.aliyun.com/", "pricing": "https://www.alibabacloud.com/help/en/model-studio/", "note": "Kuota gratis tergantung model, wilayah, dan promosi."}, {"name": "百度智能云千帆 / Baidu Qianfan", "category": "LLM, embedding", "status": "Free trial/credit tertentu", "signup": "https://console.bce.baidu.com/qianfan/", "pricing": "https://cloud.baidu.com/product/wenxinworkshop", "note": "Periksa paket dan kuota untuk akun/wilayah."}, {"name": "智谱 BigModel / Zhipu AI", "category": "LLM, coding, image", "status": "Free quota/model tertentu", "signup": "https://open.bigmodel.cn/", "pricing": "https://open.bigmodel.cn/dev/howuse/model", "note": "Model gratis dan kuota dapat berubah."}, {"name": "Moonshot AI / Kimi API", "category": "LLM teks", "status": "Trial/usage-based", "signup": "https://platform.moonshot.cn/", "pricing": "https://platform.moonshot.cn/docs", "note": "Cek kredit promosi; jangan dianggap gratis permanen."}, {"name": "MiniMax API", "category": "LLM, speech, video", "status": "Trial/usage-based", "signup": "https://platform.minimaxi.com/", "pricing": "https://platform.minimaxi.com/document/", "note": "Harga dan promo berbeda per produk/wilayah."}, {"name": "DeepSeek API", "category": "LLM teks", "status": "Berbayar / promo jika tersedia", "signup": "https://platform.deepseek.com/api_keys", "pricing": "https://api-docs.deepseek.com/quick_start/pricing", "note": "API key tersedia; jangan diasumsikan memiliki kuota gratis."}, {"name": "Anthropic Claude API", "category": "LLM teks, vision", "status": "Kredit promo jika tersedia", "signup": "https://console.anthropic.com/settings/keys", "pricing": "https://www.anthropic.com/pricing", "note": "API umumnya berbayar; promo tidak selalu tersedia."}, {"name": "OpenAI API", "category": "LLM, image, audio, video tools", "status": "Berbayar; promo akun tertentu", "signup": "https://platform.openai.com/api-keys", "pricing": "https://openai.com/api/pricing/", "note": "ChatGPT gratis tidak berarti API gratis."}, {"name": "xAI Grok API", "category": "LLM, image", "status": "Berbayar / kredit jika ditawarkan", "signup": "https://console.x.ai/", "pricing": "https://docs.x.ai/docs/overview", "note": "Cek billing dan promo akun."}, {"name": "AI21 Labs", "category": "LLM teks", "status": "Trial terbatas jika tersedia", "signup": "https://studio.ai21.com/", "pricing": "https://www.ai21.com/pricing/", "note": "Periksa kuota trial terbaru."}, {"name": "Writer API", "category": "LLM enterprise", "status": "Trial/demo", "signup": "https://dev.writer.com/", "pricing": "https://writer.com/pricing/", "note": "Akses API dapat memerlukan paket atau persetujuan."}, {"name": "Aleph Alpha", "category": "LLM, document AI", "status": "Trial/enterprise", "signup": "https://console.aleph-alpha.com/", "pricing": "https://www.aleph-alpha.com/", "note": "Akses dan harga bergantung paket."}, {"name": "Lepton AI", "category": "LLM, image", "status": "Trial/usage-based", "signup": "https://www.lepton.ai/", "pricing": "https://www.lepton.ai/", "note": "Periksa status produk, kredit, dan billing."}, {"name": "Baseten", "category": "Model serving, LLM, vision", "status": "Trial/usage-based", "signup": "https://www.baseten.co/", "pricing": "https://www.baseten.co/pricing/", "note": "Platform inference; kredit trial dapat berubah."}, {"name": "Modal", "category": "Serverless GPU/AI", "status": "Free developer allowance", "signup": "https://modal.com/", "pricing": "https://modal.com/pricing", "note": "Jatah gratis platform, bukan API model gratis tanpa batas."}, {"name": "RunPod Serverless", "category": "LLM, image, video", "status": "Kredit/promosi jika tersedia", "signup": "https://www.runpod.io/console/serverless", "pricing": "https://www.runpod.io/pricing", "note": "Umumnya bayar sesuai pemakaian GPU."}, {"name": "Stability AI", "category": "Image, audio/video tools", "status": "Trial/usage-based", "signup": "https://platform.stability.ai/account/keys", "pricing": "https://stability.ai/pricing", "note": "Kredit gratis tidak selalu tersedia untuk akun baru."}, {"name": "Luma AI", "category": "Video generation", "status": "Web trial; API berbayar/akses terbatas", "signup": "https://lumalabs.ai/", "pricing": "https://lumalabs.ai/api", "note": "Akses API dan paket berbeda dari kuota aplikasi web."}, {"name": "Runway", "category": "Video generation", "status": "Web trial; API berbayar", "signup": "https://runwayml.com/", "pricing": "https://docs.dev.runwayml.com/", "note": "API tidak otomatis gratis karena aplikasi web punya free credits."}, {"name": "ElevenLabs", "category": "Text-to-speech, voice", "status": "Free tier terbatas", "signup": "https://elevenlabs.io/app/settings/api-keys", "pricing": "https://elevenlabs.io/pricing", "note": "Paket gratis dengan batas karakter/fitur; cek ketentuan API."}, {"name": "Deepgram", "category": "Speech-to-text, voice", "status": "Trial credit", "signup": "https://console.deepgram.com/", "pricing": "https://deepgram.com/pricing", "note": "Kredit awal dapat tersedia; setelah itu usage-based."}, {"name": "AssemblyAI", "category": "Speech-to-text", "status": "Trial credit", "signup": "https://www.assemblyai.com/dashboard/signup", "pricing": "https://www.assemblyai.com/pricing", "note": "Kredit percobaan; penggunaan berikutnya berbayar."}, {"name": "Gladia", "category": "Speech-to-text, audio intelligence", "status": "Free tier/trial", "signup": "https://dashboard.gladia.io/", "pricing": "https://www.gladia.io/pricing", "note": "Kuota dan harga dapat berubah."}, {"name": "Cartesia", "category": "Text-to-speech, voice", "status": "Trial/free allowance jika tersedia", "signup": "https://play.cartesia.ai/", "pricing": "https://cartesia.ai/pricing", "note": "Cek paket saat pendaftaran."}, {"name": "Audd.io", "category": "Music recognition", "status": "Trial/demo", "signup": "https://audd.io/", "pricing": "https://audd.io/", "note": "API pengenal musik; kuota gratis penuh tidak dijamin."}, {"name": "Musixmatch API", "category": "Lyrics / music metadata", "status": "Developer access by approval", "signup": "https://developer.musixmatch.com/", "pricing": "https://developer.musixmatch.com/", "note": "Akses dan penggunaan tunduk pada lisensi/approval."}, {"name": "Ollama", "category": "Local LLM API", "status": "Gratis self-hosted", "signup": "https://ollama.com/", "pricing": "https://github.com/ollama/ollama/blob/main/docs/api.md", "note": "Menjalankan model di komputer sendiri; tidak butuh API key cloud."}];
-const $=id=>document.getElementById(id);let cat='';
-function tagClass(s){return /free tier|free allowance|gratis self-hosted|model gratis|free quota/i.test(s)?'free':/kredit|trial|promo/i.test(s)?'trial':''}
-function categoryMatches(item,c){if(!c)return true;let t=(item.category+' '+item.name).toLowerCase();if(c==='LLM')return /llm|teks|chat|model|embedding|inference/.test(t);if(c==='Gambar')return /gambar|image|vision|ocr|flux/.test(t);if(c==='Video')return /video/.test(t);if(c==='Audio')return /audio|speech|voice|suara|music|musik|text-to-speech/.test(t);if(c==='Coding')return /coding|code|developer/.test(t);if(c==='Local')return /ollama|self-hosted|local/.test(t);return true}
-function render(){let q=$('q').value.toLowerCase(),s=$('status').value;let found=items.filter(x=>(!q||(x.name+' '+x.category+' '+x.status+' '+x.note).toLowerCase().includes(q))&&(!s||x.status===s)&&categoryMatches(x,cat));$('grid').innerHTML=found.map((x,i)=>`<article class="card"><div class="top"><h3>${x.name}</h3><span class="status ${tagClass(x.status)}">${x.status}</span></div><div class="category">${x.category}</div><div class="note">${x.note}</div><div class="links"><a href="${x.signup}" target="_blank" rel="noopener noreferrer">Buka situs / daftar ↗</a><a class="secondary" href="${x.pricing}" target="_blank" rel="noopener noreferrer">Harga & docs</a></div></article>`).join('');$('count').textContent=`Menampilkan ${found.length} dari ${items.length} layanan`;$('empty').style.display=found.length?'none':'block'}
-$('q').addEventListener('input',render);$('status').addEventListener('change',render);document.querySelectorAll('#filters button').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('#filters button').forEach(x=>x.classList.remove('active'));b.classList.add('active');cat=b.dataset.cat;render()}));render();
+
+const $ = (id) => document.getElementById(id);
+const cards = Array.from(document.querySelectorAll("#grid .card"));
+let cat = "";
+function categoryMatches(card, category) {
+  if (!category) return true;
+  const text = `${card.dataset.category} ${card.dataset.name}`.toLowerCase();
+  if (category === "LLM") return /llm|teks|chat|model|embedding|inference/.test(text);
+  if (category === "Gambar") return /gambar|image|vision|ocr|flux/.test(text);
+  if (category === "Video") return /video/.test(text);
+  if (category === "Audio") return /audio|speech|voice|suara|music|musik|text-to-speech/.test(text);
+  if (category === "Coding") return /coding|code|developer/.test(text);
+  if (category === "Local") return /ollama|self-hosted|local/.test(text);
+  return true;
+}
+function render() {
+  const query = $("q").value.trim().toLowerCase();
+  const status = $("status").value;
+  let visible = 0;
+  for (const card of cards) {
+    const matches = (!query || card.dataset.search.includes(query))
+      && (!status || card.dataset.status === status)
+      && categoryMatches(card, cat);
+    card.hidden = !matches;
+    if (matches) visible++;
+  }
+  $("count").textContent = `Menampilkan ${visible} dari ${cards.length} layanan`;
+  $("empty").style.display = visible ? "none" : "block";
+}
+$("q").addEventListener("input", render);
+$("status").addEventListener("change", render);
+document.querySelectorAll("#filters button").forEach((button) => button.addEventListener("click", () => {
+  document.querySelectorAll("#filters button").forEach((item) => item.classList.remove("active"));
+  button.classList.add("active");
+  cat = button.dataset.cat;
+  render();
+}));
+render();
 </script><script>
 (() => {
   const installButton = document.getElementById("installPwaBtn");
