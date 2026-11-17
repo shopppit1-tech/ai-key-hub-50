@@ -1,6 +1,6 @@
-# AI Key Hub — 50 Direktori API AI
+# API GRATIS — 50 Direktori API AI
 
-Static Progressive Web App (PWA) berbahasa Indonesia. Situs dapat diinstal dari browser yang mendukung PWA dan menyimpan shell halaman untuk akses offline setelah kunjungan pertama.
+Static Progressive Web App (PWA) berbahasa Indonesia. Situs API GRATIS dapat diinstal dari browser yang mendukung PWA dan menyimpan shell halaman untuk akses offline setelah kunjungan pertama.
 
 ## Berkas PWA
 
