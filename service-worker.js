@@ -1,11 +1,17 @@
-const CACHE_NAME = "ai-key-hub-shell-v1";
+const CACHE_NAME = "ai-key-hub-shell-v2";
 const APP_SHELL = [
   "./",
   "./index.html",
   "./manifest.webmanifest",
   "./icons/icon-180.png",
   "./icons/icon-192.png",
-  "./icons/icon-512.png"
+  "./icons/icon-512.png",
+  "./tutorial/slide_01.png",
+  "./tutorial/slide_02.png",
+  "./tutorial/slide_03.png",
+  "./tutorial/slide_04.png",
+  "./tutorial/slide_05.png",
+  "./tutorial/slide_06.png"
 ];
 
 self.addEventListener("install", (event) => {

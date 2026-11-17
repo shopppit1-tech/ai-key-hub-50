@@ -34,12 +34,34 @@ h1{font-size:clamp(30px,6vw,48px);line-height:1.1;margin:8px 0}.grad{background:
 .note{font-size:13px;color:#c0c9dc;flex:1}.links{display:flex;gap:8px;margin-top:15px}.links a{font-size:13px;text-decoration:none;padding:8px 10px;border-radius:9px;background:#6d5bd0;color:white}.links a.secondary{background:#242e48;color:#dce4fa}
 footer{color:var(--muted);font-size:12px;padding:30px 0 42px}footer a{color:#b9adff;text-decoration:none;margin-right:14px}footer a:hover{text-decoration:underline}.warning{border:1px solid #66522c;background:#2a2419;color:#ffe0a6;border-radius:14px;padding:13px 15px;margin:16px 0}.empty{text-align:center;color:var(--muted);padding:35px;display:none}
 @media(max-width:620px){.controls{grid-template-columns:1fr}.grid{grid-template-columns:1fr}.card{min-height:190px}}
+.tutorial-section{margin:26px 0 30px;padding:20px;border:1px solid var(--line);border-radius:18px;background:linear-gradient(145deg,#151d34,#11182b)}
+.tutorial-heading{display:flex;justify-content:space-between;align-items:end;gap:16px;flex-wrap:wrap;margin-bottom:16px}.tutorial-heading h2{margin:0}.tutorial-heading p{margin:0;color:var(--muted);max-width:620px;font-size:13px}
+.tutorial-layout{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(280px,.9fr);gap:18px;align-items:start}.video-frame{aspect-ratio:16/9;overflow:hidden;border-radius:14px;background:#080b15;border:1px solid #34405e}.video-frame iframe{width:100%;height:100%;border:0}.tutorial-carousel{position:relative;overflow:hidden;border-radius:14px;background:#0a1020;border:1px solid #34405e}.tutorial-slide{display:none;width:100%;aspect-ratio:16/9;object-fit:cover}.tutorial-slide.active{display:block}.carousel-controls{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 12px;background:#111a2d}.carousel-controls button{border:1px solid #4d5d83;border-radius:9px;background:#202c49;color:var(--text);padding:7px 10px;cursor:pointer}.carousel-controls button:hover{background:#2c3b61}.carousel-dots{display:flex;justify-content:center;gap:6px;flex:1}.carousel-dot{width:8px;height:8px;border:0;border-radius:50%;padding:0;background:#52617e;cursor:pointer}.carousel-dot.active{background:var(--green);transform:scale(1.2)}.carousel-caption{padding:0 12px 12px;background:#111a2d;color:var(--muted);font-size:12px}.tutorial-note{margin:14px 0 0;color:var(--muted);font-size:12px}.tutorial-note a{color:#b9adff}
+@media(max-width:820px){.tutorial-layout{grid-template-columns:1fr}.tutorial-section{padding:15px}}
+.install-btn{display:block;margin:16px auto 0;padding:10px 16px;border:1px solid #8276e8;border-radius:12px;background:#6d5bd0;color:#fff;font:inherit;font-weight:650;cursor:pointer}.install-btn:hover{background:#7a69dc}.install-btn:focus-visible{outline:3px solid #65e4c2;outline-offset:3px}.install-btn[hidden]{display:none}
 .install-btn{display:block;margin:16px auto 0;padding:10px 16px;border:1px solid #8276e8;border-radius:12px;background:#6d5bd0;color:#fff;font:inherit;font-weight:650;cursor:pointer}.install-btn:hover{background:#7a69dc}.install-btn:focus-visible{outline:3px solid #65e4c2;outline-offset:3px}.install-btn[hidden]{display:none}
 .card[hidden]{display:none!important}</style></head><body>
 <header><div class="wrap"><span class="pill">DIREKTORI PENGEMBANG • UPDATE 5 NOVEMBER 2026</span>
 <h1><span class="grad">AI KEY HUB</span></h1><p class="sub">50 layanan dan platform AI dengan halaman developer/API. Cari layanan, cek status akses gratis, lalu buka halaman resmi untuk membuat akun dan API key.</p>
 <div class="stats"><div class="stat"><b>50</b> layanan</div><div class="stat"><b>8+</b> kategori</div></div><button id="installPwaBtn" class="install-btn" type="button">Instal AI Key Hub</button></div></header>
 <main class="wrap">
+<section class="tutorial-section" aria-labelledby="tutorial-heading">
+  <div class="tutorial-heading"><div><h2 id="tutorial-heading">Tutorial AI Key Hub</h2><p>Pelajari cara mencari layanan API AI, memeriksa status akses, dan menuju halaman resmi penyedia.</p></div><span class="pill">VIDEO + LANGKAH VISUAL</span></div>
+  <div class="tutorial-layout">
+    <div class="video-frame"><iframe src="https://www.youtube.com/embed/obOyJTWwJ5o" title="Tutorial cara menggunakan AI Key Hub" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+    <div class="tutorial-carousel" aria-label="Galeri langkah tutorial">
+      <img class="tutorial-slide active" src="./tutorial/slide_01.png" alt="Langkah 1: mengenali fungsi AI Key Hub">
+      <img class="tutorial-slide" src="./tutorial/slide_02.png" alt="Langkah 2: mencari layanan AI">
+      <img class="tutorial-slide" src="./tutorial/slide_03.png" alt="Langkah 3: menyaring kategori dan status akses">
+      <img class="tutorial-slide" src="./tutorial/slide_04.png" alt="Langkah 4: membuka halaman resmi penyedia">
+      <img class="tutorial-slide" src="./tutorial/slide_05.png" alt="Langkah 5: menjaga API key tetap aman">
+      <img class="tutorial-slide" src="./tutorial/slide_06.png" alt="Langkah 6: mulai eksplorasi layanan AI">
+      <div class="carousel-controls"><button type="button" id="tutorialPrev" aria-label="Gambar sebelumnya">←</button><div class="carousel-dots" id="tutorialDots"></div><button type="button" id="tutorialNext" aria-label="Gambar berikutnya">→</button></div>
+      <div class="carousel-caption" id="tutorialCaption">Temukan layanan API AI dalam satu direktori.</div>
+    </div>
+  </div>
+  <p class="tutorial-note">Video tutorial: <a href="https://youtu.be/obOyJTWwJ5o" target="_blank" rel="noopener noreferrer">tonton di YouTube ↗</a>. Gambar tutorial berganti otomatis setiap 5 detik.</p>
+</section>
 <div class="warning"><b>Penting:</b> Tidak semua 50 layanan menyediakan API gratis permanen. Label membedakan free tier, kuota/model gratis, kredit percobaan, promo, dan layanan berbayar/trial. Status serta kuota dapat berubah; cek halaman harga resmi sebelum dipakai. Chat/web gratis tidak otomatis berarti API gratis.</div>
 <div class="controls"><input id="q" type="search" placeholder="Cari nama layanan, kategori, atau fitur…" aria-label="Cari layanan, kategori, atau fitur API AI" autocomplete="off"><select id="status" aria-label="Filter status akses atau harga"><option value="">Semua status</option><option>Free tier</option><option>Free allowance</option><option>Model gratis terbatas</option><option>Free quota/model tertentu</option><option>Trial gratis terbatas</option><option>Kredit percobaan</option><option>Gratis self-hosted</option></select></div>
 <div class="filters" id="filters"><button class="active" data-cat="">Semua</button><button data-cat="LLM">LLM / Chat</button><button data-cat="Gambar">Gambar</button><button data-cat="Video">Video</button><button data-cat="Audio">Audio / Suara</button><button data-cat="Coding">Coding</button><button data-cat="Local">Self-hosted</button></div>
@@ -422,6 +444,41 @@ render();
       });
     });
   }
+})();
+</script><script>
+(() => {
+  const slides = [...document.querySelectorAll(".tutorial-slide")];
+  const dots = document.getElementById("tutorialDots");
+  const caption = document.getElementById("tutorialCaption");
+  if (!slides.length || !dots || !caption) return;
+  const captions = [
+    "Temukan layanan API AI dalam satu direktori.",
+    "Cari layanan berdasarkan nama, fitur, atau kebutuhan.",
+    "Gunakan filter kategori dan status akses.",
+    "Buka halaman resmi untuk membuat akun dan API key.",
+    "Jaga API key tetap privat dan aman.",
+    "Mulai eksplorasi AI Key Hub sekarang."
+  ];
+  let current = 0;
+  slides.forEach((_, index) => {
+    const dot = document.createElement("button");
+    dot.type = "button";
+    dot.className = "carousel-dot";
+    dot.setAttribute("aria-label", `Tampilkan gambar ${index + 1}`);
+    dot.addEventListener("click", () => show(index));
+    dots.appendChild(dot);
+  });
+  const dotItems = [...dots.children];
+  function show(index) {
+    current = (index + slides.length) % slides.length;
+    slides.forEach((slide, i) => slide.classList.toggle("active", i === current));
+    dotItems.forEach((dot, i) => dot.classList.toggle("active", i === current));
+    caption.textContent = captions[current];
+  }
+  document.getElementById("tutorialPrev").addEventListener("click", () => show(current - 1));
+  document.getElementById("tutorialNext").addEventListener("click", () => show(current + 1));
+  show(0);
+  setInterval(() => show(current + 1), 5000);
 })();
 </script>
 </body></html>
