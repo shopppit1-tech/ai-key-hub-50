@@ -1,7 +1,9 @@
-const CACHE_NAME = "api-gratis-shell-v7";
+const CACHE_NAME = "api-gratis-shell-v9";
 const APP_SHELL = [
   "./",
   "./index.html",
+  "./about.html",
+  "./panduan-api-ai.html",
   "./manifest.webmanifest",
   "./icons/icon-180.png",
   "./icons/icon-192.png",
@@ -26,7 +28,7 @@ self.addEventListener("activate", (event) => {
   event.waitUntil(
     caches.keys()
       .then((keys) => Promise.all(
-        keys.filter((key) => key.startsWith("ai-key-hub-") && key !== CACHE_NAME)
+        keys.filter((key) => (key.startsWith("ai-key-hub-") || key.startsWith("api-gratis-shell-")) && key !== CACHE_NAME)
           .map((key) => caches.delete(key))
       ))
       .then(() => self.clients.claim())
